@@ -2,118 +2,130 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Result page</title>
-    <link rel="stylesheet" href="css/output.css" />
+    <title>Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <nav class="bg-white shadow">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 justify-between">
-          <a
-            href="index.html"
-            class="flex flex-shrink-0 items-center text-indigo-500 text-3xl font-medium"
-          >
-            Percentage
-          </a>
-          <div class="hidden md:ml-6 md:flex md:space-x-8">
-            <a
-              href="index.html"
-              class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >Home</a
-            >
-            <a
-              href="result.html"
-              class="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-              >Result</a
-            >
-            <a
-              href="#"
-              class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >About us</a
-            >
-            <a
-              href="#"
-              class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >Contact</a
-            >
-          </div>
-        </div>
-      </div>
-    </nav>
 
-    <div class="mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8 md:mt-24 mt-3">
-      <main class="">
-        <div class="rounded-md border overflow-hidden">
-          <section
-            class="w-full flex items-center justify-between py-6 p-4 bg-[#F9FAFE]"
-          >
-            <div class="flex items-center">
-              <label for="form1-1" class="max-w-[190px] text-lg pr-4"
-                >What is</label
-              >
+  <body class="page">
+    <div class="center">
+      <header class="header">
+        <h1 class="header__logo-outer">
+          <a href="/" class="logo header__logo">
+            <span class="logo__text">Percentage Calculator</span>
+            <svg
+              class="logo__icon"
+              width="40"
+              height="52"
+              viewbox="0 0 228 296"
+            >
+              <use xlink:href="images/sprites.svg#calc" />
+            </svg>
+            <svg
+              class="logo__icon-text"
+              width="157"
+              height="48"
+              viewbox="0 0 157 48"
+            >
+              <use xlink:href="images/sprites.svg#text" />
+            </svg>
+          </a>
+        </h1>
+        <span class="header__line"></span>
+        <p class="header__text">
+          Have trouble calculating percentages? Our service helps you save time
+          by calculating the values you put in the input boxes. You’ll get the
+          required answer for free in no time!
+        </p>
+      </header>
+      <main class="result-page">
+        <section class="forms__form form">
+          <div class="form__quest">
+            <label for="form1-1" class="form__quest-label">
+              What is
               <input
                 type="text"
                 id="form1-1"
                 placeholder="n"
-                class="text-center border-b-2 h-6 focus:border-b-indigo-500 outline-none bg-transparent font-bold text-[#838892]"
-                disabled
+                class="form__input"
                 value="20"
+                disabled
               />
-              <label for="form1-2" class="max-w-[190px] px-4 text-lg"
-                >percent of</label
-              >
+              percent&nbsp;
+            </label>
+            <label for="form1-2" class="form__quest-label">
+              of
               <input
                 type="text"
                 id="form1-2"
                 placeholder="a"
-                class="text-center border-b-2 h-6 focus:border-b-indigo-500 outline-none bg-transparent mr-4 font-bold text-[#838892]"
-                disabled
                 value="1000"
+                class="form__input"
+                disabled
               />
-            </div>
-            <span class="font-bold text-xl"> = </span>
+            </label>
+          </div>
+
+          <span class="equal-sign"> = </span>
+          <div class="form__answer">
             <input
               type="text"
-              class="border text-center max-w-[200px] text-xl p-2 font-bold"
-              value="20"
+              readonly
+              disabled
+              placeholder="Answer"
+              class="form__input form__input--answer"
+              value="200"
+              disabled
             />
-          </section>
-        </div>
+            <button class="form__copy" title="Copy">
+              <span class="form__copy-content" tabindex="-1">
+                <svg
+                  class="form__copy-icon"
+                  width="20"
+                  height="20"
+                  viewbox="0 0 21 20"
+                >
+                  <use xlink:href="images/sprites.svg#copy" />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </section>
 
-        <div class="max-w-full mt-12 border rounded-md" aria-label="Sidebar">
-          <div
-            class="px-3 py-4 overflow-y-auto rounded bg-gray-50 dark:bg-gray-800"
-          >
-            <h2 class="text-3xl">What is 20 Percent of 1000?</h2>
-            <p class="mt-3">
+        <section class="result-page__section">
+          <div>
+            <h2>What is 20 Percent of 1000?</h2>
+            <p>
               20 percent *1000 = (20/100)*1000 = (20*1000)/100 = 20000/100 = 200
             </p>
             <p>
               We need to determine 20% of 1000 now and the procedure explaining
-              it as such <br />
+              it as such
             </p>
 
-            <p class="mt-4">
-              Step 1: In the given case Output Value is 1000. <br />
-              Step 2: Let us consider the unknown value as x. <br />
-              Step 3: Consider the output value of 1000 = 100%. <br />
-              Step 4: In the Same way, x = 20%. <br />
+            <p>Step 1: In the given case Output Value is 1000.</p>
+            <p>Step 2: Let us consider the unknown value as x.</p>
+            <p>Step 3: Consider the output value of 1000 = 100%.</p>
+            <p>Step 4: In the Same way, x = 20%.</p>
+            <p>
               Step 5: On dividing the pair of simple equations we got the
               equation as under 1000 = 100% (1). x = 20% (2). (1000%)/(x%) =
-              100/20 <br />
-              Step 6: Reciprocal of both the sides results in the following
-              equation x%/1000% = 20/100 <br />
-              Step 7: Simplifying the above obtained equation further will tell
-              what is 20% of 1000 x = 200% <br />
+              100/20
             </p>
-
-            <p class="mt-4">Therefore, 20% of 1000 is 200</p>
+            <p>
+              Step 6: Reciprocal of both the sides results in the following
+              equation x%/1000% = 20/100
+            </p>
+            <p>
+              Step 7: Simplifying the above obtained equation further will tell
+              what is 20% of 1000 x = 200%
+            </p>
+            <p>Therefore, 20% of 1000 is 200</p>
           </div>
-        </div>
+        </section>
 
-        <div class="max-w-full mt-12 border rounded-md" aria-label="Sidebar">
+        <section class="result-page__section">
           <div
             class="px-3 py-4 overflow-y-auto rounded bg-gray-50 dark:bg-gray-800"
           >
@@ -121,10 +133,8 @@
               Standard Percentage of 1000 Calculation Examples
             </h2>
 
-            <!-- <ul class="p-5 list-disc flex flex-wrap gap-x-14"> -->
-
-            <div class="columns-4">
-              <ul class="p-5 list-disc flex flex-wrap gap-x-14">
+            <div class="column-4">
+              <ul>
                 <li>
                   <a href="#" class="text-indigo-500">5 Percent of 1000</a>
                 </li>
@@ -141,7 +151,7 @@
                   <a href="#" class="text-indigo-500">25 Percent of 1000</a>
                 </li>
               </ul>
-              <ul class="p-5 list-disc flex flex-wrap gap-x-14">
+              <ul>
                 <li>
                   <a href="#" class="text-indigo-500">30 Percent of 1000</a>
                 </li>
@@ -160,7 +170,7 @@
                   <a href="#" class="text-indigo-500">50 Percent of 1000</a>
                 </li>
               </ul>
-              <ul class="p-5 list-disc flex flex-wrap gap-x-14">
+              <ul>
                 <li>
                   <a href="#" class="text-indigo-500">55 Percent of 1000</a>
                 </li>
@@ -177,7 +187,7 @@
                   <a href="#" class="text-indigo-500">75 Percent of 1000</a>
                 </li>
               </ul>
-              <ul class="p-5 list-disc flex flex-wrap gap-x-14">
+              <ul>
                 <li>
                   <a href="#" class="text-indigo-500">80 Percent of 1000</a>
                 </li>
@@ -196,248 +206,485 @@
               </ul>
             </div>
           </div>
-        </div>
+        </section>
+
+        <section class="result-page__section section-with-table">
+          <h2>Nearby Results</h2>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 col-sm-12">
+                <table class="result">
+                  <tbody>
+                    <tr>
+                      <th>20% of</th>
+                      <th>Result</th>
+                    </tr>
+                    <tr>
+                      <td>1000</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>1000.01</td>
+                      <td>200.002</td>
+                    </tr>
+                    <tr>
+                      <td>1000.02</td>
+                      <td>200.004</td>
+                    </tr>
+                    <tr>
+                      <td>1000.03</td>
+                      <td>200.006</td>
+                    </tr>
+                    <tr>
+                      <td>1000.04</td>
+                      <td>200.008</td>
+                    </tr>
+                    <tr>
+                      <td>1000.05</td>
+                      <td>200.01</td>
+                    </tr>
+                    <tr>
+                      <td>1000.06</td>
+                      <td>200.012</td>
+                    </tr>
+                    <tr>
+                      <td>1000.07</td>
+                      <td>200.014</td>
+                    </tr>
+                    <tr>
+                      <td>1000.08</td>
+                      <td>200.016</td>
+                    </tr>
+                    <tr>
+                      <td>1000.09</td>
+                      <td>200.018</td>
+                    </tr>
+                    <tr>
+                      <td>1000.1</td>
+                      <td>200.02</td>
+                    </tr>
+                    <tr>
+                      <td>1000.11</td>
+                      <td>200.022</td>
+                    </tr>
+                    <tr>
+                      <td>1000.12</td>
+                      <td>200.024</td>
+                    </tr>
+                    <tr>
+                      <td>1000.13</td>
+                      <td>200.026</td>
+                    </tr>
+                    <tr>
+                      <td>1000.14</td>
+                      <td>200.028</td>
+                    </tr>
+                    <tr>
+                      <td>1000.15</td>
+                      <td>200.03</td>
+                    </tr>
+                    <tr>
+                      <td>1000.16</td>
+                      <td>200.032</td>
+                    </tr>
+                    <tr>
+                      <td>1000.17</td>
+                      <td>200.034</td>
+                    </tr>
+                    <tr>
+                      <td>1000.18</td>
+                      <td>200.036</td>
+                    </tr>
+                    <tr>
+                      <td>1000.19</td>
+                      <td>200.038</td>
+                    </tr>
+                    <tr>
+                      <td>1000.2</td>
+                      <td>200.04</td>
+                    </tr>
+                    <tr>
+                      <td>1000.21</td>
+                      <td>200.042</td>
+                    </tr>
+                    <tr>
+                      <td>1000.22</td>
+                      <td>200.044</td>
+                    </tr>
+                    <tr>
+                      <td>1000.23</td>
+                      <td>200.046</td>
+                    </tr>
+                    <tr>
+                      <td>1000.24</td>
+                      <td>200.048</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-3 col-sm-12">
+                <table class="result">
+                  <tbody>
+                    <tr>
+                      <th>20% of</th>
+                      <th>Result</th>
+                    </tr>
+                    <tr>
+                      <td>1000.25</td>
+                      <td>200.05</td>
+                    </tr>
+                    <tr>
+                      <td>1000.26</td>
+                      <td>200.052</td>
+                    </tr>
+                    <tr>
+                      <td>1000.27</td>
+                      <td>200.054</td>
+                    </tr>
+                    <tr>
+                      <td>1000.28</td>
+                      <td>200.056</td>
+                    </tr>
+                    <tr>
+                      <td>1000.29</td>
+                      <td>200.058</td>
+                    </tr>
+                    <tr>
+                      <td>1000.3</td>
+                      <td>200.06</td>
+                    </tr>
+                    <tr>
+                      <td>1000.31</td>
+                      <td>200.062</td>
+                    </tr>
+                    <tr>
+                      <td>1000.32</td>
+                      <td>200.064</td>
+                    </tr>
+                    <tr>
+                      <td>1000.33</td>
+                      <td>200.066</td>
+                    </tr>
+                    <tr>
+                      <td>1000.34</td>
+                      <td>200.068</td>
+                    </tr>
+                    <tr>
+                      <td>1000.35</td>
+                      <td>200.07</td>
+                    </tr>
+                    <tr>
+                      <td>1000.36</td>
+                      <td>200.072</td>
+                    </tr>
+                    <tr>
+                      <td>1000.37</td>
+                      <td>200.074</td>
+                    </tr>
+                    <tr>
+                      <td>1000.38</td>
+                      <td>200.076</td>
+                    </tr>
+                    <tr>
+                      <td>1000.39</td>
+                      <td>200.078</td>
+                    </tr>
+                    <tr>
+                      <td>1000.4</td>
+                      <td>200.08</td>
+                    </tr>
+                    <tr>
+                      <td>1000.41</td>
+                      <td>200.082</td>
+                    </tr>
+                    <tr>
+                      <td>1000.42</td>
+                      <td>200.084</td>
+                    </tr>
+                    <tr>
+                      <td>1000.43</td>
+                      <td>200.086</td>
+                    </tr>
+                    <tr>
+                      <td>1000.44</td>
+                      <td>200.088</td>
+                    </tr>
+                    <tr>
+                      <td>1000.45</td>
+                      <td>200.09</td>
+                    </tr>
+                    <tr>
+                      <td>1000.46</td>
+                      <td>200.092</td>
+                    </tr>
+                    <tr>
+                      <td>1000.47</td>
+                      <td>200.094</td>
+                    </tr>
+                    <tr>
+                      <td>1000.48</td>
+                      <td>200.096</td>
+                    </tr>
+                    <tr>
+                      <td>1000.49</td>
+                      <td>200.098</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-3 col-sm-12">
+                <table class="result">
+                  <tbody>
+                    <tr>
+                      <th>20% of</th>
+                      <th>Result</th>
+                    </tr>
+                    <tr>
+                      <td>1000.5</td>
+                      <td>200.1</td>
+                    </tr>
+                    <tr>
+                      <td>1000.51</td>
+                      <td>200.102</td>
+                    </tr>
+                    <tr>
+                      <td>1000.52</td>
+                      <td>200.104</td>
+                    </tr>
+                    <tr>
+                      <td>1000.53</td>
+                      <td>200.106</td>
+                    </tr>
+                    <tr>
+                      <td>1000.54</td>
+                      <td>200.108</td>
+                    </tr>
+                    <tr>
+                      <td>1000.55</td>
+                      <td>200.11</td>
+                    </tr>
+                    <tr>
+                      <td>1000.56</td>
+                      <td>200.112</td>
+                    </tr>
+                    <tr>
+                      <td>1000.57</td>
+                      <td>200.114</td>
+                    </tr>
+                    <tr>
+                      <td>1000.58</td>
+                      <td>200.116</td>
+                    </tr>
+                    <tr>
+                      <td>1000.59</td>
+                      <td>200.118</td>
+                    </tr>
+                    <tr>
+                      <td>1000.6</td>
+                      <td>200.12</td>
+                    </tr>
+                    <tr>
+                      <td>1000.61</td>
+                      <td>200.122</td>
+                    </tr>
+                    <tr>
+                      <td>1000.62</td>
+                      <td>200.124</td>
+                    </tr>
+                    <tr>
+                      <td>1000.63</td>
+                      <td>200.126</td>
+                    </tr>
+                    <tr>
+                      <td>1000.64</td>
+                      <td>200.128</td>
+                    </tr>
+                    <tr>
+                      <td>1000.65</td>
+                      <td>200.13</td>
+                    </tr>
+                    <tr>
+                      <td>1000.66</td>
+                      <td>200.132</td>
+                    </tr>
+                    <tr>
+                      <td>1000.67</td>
+                      <td>200.134</td>
+                    </tr>
+                    <tr>
+                      <td>1000.68</td>
+                      <td>200.136</td>
+                    </tr>
+                    <tr>
+                      <td>1000.69</td>
+                      <td>200.138</td>
+                    </tr>
+                    <tr>
+                      <td>1000.7</td>
+                      <td>200.14</td>
+                    </tr>
+                    <tr>
+                      <td>1000.71</td>
+                      <td>200.142</td>
+                    </tr>
+                    <tr>
+                      <td>1000.72</td>
+                      <td>200.144</td>
+                    </tr>
+                    <tr>
+                      <td>1000.73</td>
+                      <td>200.146</td>
+                    </tr>
+                    <tr>
+                      <td>1000.74</td>
+                      <td>200.148</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-3 col-sm-12">
+                <table class="result">
+                  <tbody>
+                    <tr>
+                      <th>20% of</th>
+                      <th>Result</th>
+                    </tr>
+                    <tr>
+                      <td>1000.75</td>
+                      <td>200.15</td>
+                    </tr>
+                    <tr>
+                      <td>1000.76</td>
+                      <td>200.152</td>
+                    </tr>
+                    <tr>
+                      <td>1000.77</td>
+                      <td>200.154</td>
+                    </tr>
+                    <tr>
+                      <td>1000.78</td>
+                      <td>200.156</td>
+                    </tr>
+                    <tr>
+                      <td>1000.79</td>
+                      <td>200.158</td>
+                    </tr>
+                    <tr>
+                      <td>1000.8</td>
+                      <td>200.16</td>
+                    </tr>
+                    <tr>
+                      <td>1000.81</td>
+                      <td>200.162</td>
+                    </tr>
+                    <tr>
+                      <td>1000.82</td>
+                      <td>200.164</td>
+                    </tr>
+                    <tr>
+                      <td>1000.83</td>
+                      <td>200.166</td>
+                    </tr>
+                    <tr>
+                      <td>1000.84</td>
+                      <td>200.168</td>
+                    </tr>
+                    <tr>
+                      <td>1000.85</td>
+                      <td>200.17</td>
+                    </tr>
+                    <tr>
+                      <td>1000.86</td>
+                      <td>200.172</td>
+                    </tr>
+                    <tr>
+                      <td>1000.87</td>
+                      <td>200.174</td>
+                    </tr>
+                    <tr>
+                      <td>1000.88</td>
+                      <td>200.176</td>
+                    </tr>
+                    <tr>
+                      <td>1000.89</td>
+                      <td>200.178</td>
+                    </tr>
+                    <tr>
+                      <td>1000.9</td>
+                      <td>200.18</td>
+                    </tr>
+                    <tr>
+                      <td>1000.91</td>
+                      <td>200.182</td>
+                    </tr>
+                    <tr>
+                      <td>1000.92</td>
+                      <td>200.184</td>
+                    </tr>
+                    <tr>
+                      <td>1000.93</td>
+                      <td>200.186</td>
+                    </tr>
+                    <tr>
+                      <td>1000.94</td>
+                      <td>200.188</td>
+                    </tr>
+                    <tr>
+                      <td>1000.95</td>
+                      <td>200.19</td>
+                    </tr>
+                    <tr>
+                      <td>1000.96</td>
+                      <td>200.192</td>
+                    </tr>
+                    <tr>
+                      <td>1000.97</td>
+                      <td>200.194</td>
+                    </tr>
+                    <tr>
+                      <td>1000.98</td>
+                      <td>200.196</td>
+                    </tr>
+                    <tr>
+                      <td>1000.99</td>
+                      <td>200.198</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
-    <footer class="bg-gray-800 mt-64" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" class="sr-only">Footer</h2>
-      <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div class="grid grid-cols-2 gap-8 xl:col-span-2">
-            <div class="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 class="text-base font-medium text-white">Solutions</h3>
-                <ul role="list" class="mt-4 space-y-4">
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Marketing</a
-                    >
-                  </li>
+    <div class="center center--oyh">
+      <footer class="footer">
+        <p class="font-medium text-base leading-6 text-slate-500 text-center">
+          © 2005 — 2022 Percentage®. All rights reserved.
+        </p>
 
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Analytics</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Commerce</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Insights</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="mt-12 md:mt-0">
-                <h3 class="text-base font-medium text-white">Support</h3>
-                <ul role="list" class="mt-4 space-y-4">
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Pricing</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Documentation</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Guides</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >API Status</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 class="text-base font-medium text-white">Company</h3>
-                <ul role="list" class="mt-4 space-y-4">
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >About</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Blog</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Jobs</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Press</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Partners</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="mt-12 md:mt-0">
-                <h3 class="text-base font-medium text-white">Legal</h3>
-                <ul role="list" class="mt-4 space-y-4">
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Claim</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Privacy</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white"
-                      >Terms</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
+        <nav class="footer__nav">
+          <div class="py-2 px-5">
+            <a class="hover:text-gray-900" href="/about">About</a>
           </div>
-          <div class="mt-8 xl:mt-0">
-            <h3 class="text-base font-medium text-white">
-              Subscribe to our newsletter
-            </h3>
-            <p class="mt-4 text-base text-gray-300">
-              The latest news, articles, and resources, sent to your inbox
-              weekly.
-            </p>
-            <form class="mt-4 sm:flex sm:max-w-md">
-              <label for="email-address" class="sr-only">Email address</label>
-              <input
-                type="email"
-                name="email-address"
-                id="email-address"
-                autocomplete="email"
-                required
-                class="w-full min-w-0 appearance-none rounded-md border border-transparent bg-white py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:border-white focus:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                placeholder="Enter your email"
-              />
-              <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                <button
-                  type="submit"
-                  class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-500 py-2 px-4 text-base font-medium text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
+          <div class="py-2 px-5">
+            <a class="hover:text-gray-900" href="/category/code">Code</a>
           </div>
-        </div>
-        <div
-          class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between"
-        >
-          <div class="flex space-x-6 md:order-2">
-            <a href="#" class="text-gray-400 hover:text-gray-300">
-              <span class="sr-only">Facebook</span>
-              <svg
-                class="h-6 w-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
-
-            <a href="#" class="text-gray-400 hover:text-gray-300">
-              <span class="sr-only">Instagram</span>
-              <svg
-                class="h-6 w-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
-
-            <a href="#" class="text-gray-400 hover:text-gray-300">
-              <span class="sr-only">Twitter</span>
-              <svg
-                class="h-6 w-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
-                />
-              </svg>
-            </a>
-
-            <a href="#" class="text-gray-400 hover:text-gray-300">
-              <span class="sr-only">GitHub</span>
-              <svg
-                class="h-6 w-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
-
-            <a href="#" class="text-gray-400 hover:text-gray-300">
-              <span class="sr-only">Dribbble</span>
-              <svg
-                class="h-6 w-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
+          <div class="py-2 px-5">
+            <a class="hover:text-gray-900" href="#">Contact</a>
           </div>
-          <p class="mt-8 text-base text-gray-400 md:order-1 md:mt-0">
-            &copy; 2020 Your Company, Inc. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
+          <div class="py-2 px-5">
+            <a class="hover:text-gray-900" href="/privacy">Privacy</a>
+          </div>
+          <div class="py-2 px-5">
+            <a class="hover:text-gray-900" href="/setup">Setup</a>
+          </div>
+          <div class="py-2 px-5">
+            <a class="hover:text-gray-900" href="/sitemap">Sitemap</a>
+          </div>
+        </nav>
+      </footer>
+    </div>
+    <script src="scripts/common.js?4"></script>
   </body>
 </html>
