@@ -581,13 +581,25 @@ input {
 .footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
   border-top: 1px solid rgb(229, 231, 235);
   padding-block: 32px 80px;
   margin-top: 50px;
 }
 
+@media (max-width: 800px) {
+  .footer {
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
 .footer .footer__nav {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
