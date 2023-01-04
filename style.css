@@ -593,7 +593,12 @@ input {
     justify-content: center;
     padding: 20px;
     text-align: center;
+    color: rgb(100, 116, 139);
   }
+}
+
+.footer p {
+  color: rgb(100, 116, 139);
 }
 
 .footer .footer__nav {
@@ -606,11 +611,19 @@ input {
 .footer .footer__nav a {
   text-decoration: none;
   color: black;
-  font-weight: 500;
+  color: rgb(100, 116, 139);
+}
+
+.footer .footer__nav a:hover {
+  color: black;
 }
 
 .result-page .forms__form.form {
   border-radius: 20px;
+}
+.result-page .forms__form.form.bg {
+  background: #f9fafe;
+  margin-top: 20px;
 }
 
 .result-page__section {

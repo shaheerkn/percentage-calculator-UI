@@ -93,6 +93,59 @@
           </div>
         </section>
 
+        <section class="forms__form form bg">
+          <div class="form__quest">
+            <label for="form1-1" class="form__quest-label">
+              What is
+              <input
+                type="text"
+                id="form1-1"
+                placeholder="n"
+                class="form__input"
+                value="20"
+                disabled
+              />
+              percent&nbsp;
+            </label>
+            <label for="form1-2" class="form__quest-label">
+              of
+              <input
+                type="text"
+                id="form1-2"
+                placeholder="a"
+                value="1000"
+                class="form__input"
+                disabled
+              />
+            </label>
+          </div>
+
+          <span class="equal-sign"> = </span>
+          <div class="form__answer">
+            <input
+              type="text"
+              readonly
+              disabled
+              placeholder="Answer"
+              class="form__input form__input--answer"
+              value="200"
+              disabled
+            />
+            <button class="form__copy" title="Copy">
+              <span class="form__copy-content" tabindex="-1">
+                <svg
+                  class="form__copy-icon"
+                  width="20"
+                  height="20"
+                  viewbox="0 0 21 20"
+                >
+                  <use xlink:href="images/sprites.svg#copy" />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </section>
+
         <section class="result-page__section">
           <div>
             <h2>What is 20 Percent of 1000?</h2>
