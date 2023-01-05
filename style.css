@@ -621,10 +621,6 @@ input {
 .result-page .forms__form.form {
   border-radius: 20px;
 }
-.result-page .forms__form.form.bg {
-  background: #f9fafe;
-  margin-top: 20px;
-}
 
 .result-page__section {
   background: white;
