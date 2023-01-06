@@ -7,362 +7,314 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body class="page">
-    <div class="center">
-      <header class="header">
-        <h1 class="header__logo-outer">
-          <a href="/" class="logo header__logo">
-            <span class="logo__text">Percentage Calculator</span>
-            <svg
-              class="logo__icon"
-              width="40"
-              height="52"
-              viewbox="0 0 228 296"
-            >
-              <use xlink:href="images/sprites.svg#calc" />
-            </svg>
-            <svg
-              class="logo__icon-text"
-              width="157"
-              height="48"
-              viewbox="0 0 157 48"
-            >
-              <use xlink:href="images/sprites.svg#text" />
-            </svg>
-          </a>
-        </h1>
-        <span class="header__line"></span>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="header__logo">Percentage Calculator</a>
         <p class="header__text">
           Have trouble calculating percentages? Our service helps you save time
           by calculating the values you put in the input boxes. You’ll get the
           required answer for free in no time!
         </p>
-      </header>
-      <main class="forms">
-        <section class="forms__form form">
-          <div class="form__quest">
-            <label for="form1-1" class="form__quest-label">
-              What is
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="section forms">
+          <form class="forms__form">
+            <div class="form__quest">
+              <label for="input-1" class="form__quest-label">
+                What is
+                <input
+                  type="text"
+                  id="input-1"
+                  placeholder="n"
+                  class="form__input"
+                />
+                percent&nbsp;
+              </label>
+              <label for="input-2" class="form__quest-label">
+                of
+                <input
+                  type="text"
+                  id="input-2"
+                  placeholder="a"
+                  class="form__input"
+                />
+                ?
+              </label>
+            </div>
+            <div class="form__answer">
+              <button class="btn btn--primary">Calculate</button>
               <input
                 type="text"
-                id="form1-1"
-                placeholder="n"
-                data-var="n"
-                class="form__input"
+                readonly
+                disabled
+                placeholder="Answer"
+                class="form__input form__input--answer"
               />
-              percent&nbsp;
-            </label>
-            <label for="form1-2" class="form__quest-label">
-              of
+              <button class="form__copy">
+                <span class="form__copy-content" tabindex="-1">
+                  <svg
+                    class="form__copy-icon"
+                    width="20"
+                    height="20"
+                    viewbox="0 0 21 20"
+                  >
+                    <use xlink:href="images/sprites.svg#copy" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </form>
+
+          <form class="forms__form">
+            <div class="form__quest">
+              <label for="form2-input-1" class="form__quest-label">
+                <input
+                  type="text"
+                  id="form2-input-1"
+                  placeholder="a"
+                  data-var="a"
+                  class="form__input"
+                />
+                is&nbsp;
+              </label>
+              <label for="form2-input-2" class="form__quest-label">
+                what percent of
+                <input
+                  type="text"
+                  id="form2-input-2"
+                  placeholder="b"
+                  class="form__input"
+                />
+                ?
+              </label>
+            </div>
+            <div class="form__answer">
+              <button class="btn btn--primary">Calculate</button>
               <input
                 type="text"
-                id="form1-2"
-                placeholder="a"
-                data-var="a"
-                class="form__input"
+                readonly
+                disabled
+                placeholder="Answer"
+                class="form__input form__input--answer"
               />
-              ?
-            </label>
-          </div>
-          <div class="form__answer">
-            <button class="form__button">
-              <span class="form__button-content" tabindex="-1">Calculate</span>
-            </button>
-            <input
-              type="text"
-              readonly
-              disabled
-              placeholder="Answer"
-              class="form__input form__input--answer"
-            />
-            <button class="form__copy" title="Copy">
-              <span class="form__copy-content" tabindex="-1">
-                <svg
-                  class="form__copy-icon"
-                  width="20"
-                  height="20"
-                  viewbox="0 0 21 20"
+              <button class="form__copy" title="Copy">
+                <span class="form__copy-content" tabindex="-1">
+                  <svg
+                    class="form__copy-icon"
+                    width="20"
+                    height="20"
+                    viewbox="0 0 21 20"
+                  >
+                    <use xlink:href="images/sprites.svg#copy" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </form>
+
+          <form class="forms__form">
+            <div class="form__quest">
+              <label for="form3-input-1" class="form__quest-label">
+                <span class="form__quest-multiline"
+                  >What is the percentage <br />increase/decrease from</span
                 >
-                  <use xlink:href="images/sprites.svg#copy" />
-                </svg>
-              </span>
-            </button>
-          </div>
+                <input
+                  type="text"
+                  id="form3-input-1"
+                  placeholder="a"
+                  class="form__input"
+                />
+              </label>
+              <label for="form3-input-2" class="form__quest-label">
+                to
+                <input
+                  type="text"
+                  id="form3-input-2"
+                  placeholder="b"
+                  class="form__input"
+                />
+                ?
+              </label>
+            </div>
+            <div class="form__answer">
+              <button class="btn btn--primary">Calculate</button>
+              <input
+                type="text"
+                readonly
+                disabled
+                placeholder="Answer"
+                class="form__input form__input--answer"
+              />
+              <button class="form__copy" title="Copy">
+                <span class="form__copy-content" tabindex="-1">
+                  <svg
+                    class="form__copy-icon"
+                    width="20"
+                    height="20"
+                    viewbox="0 0 21 20"
+                  >
+                    <use xlink:href="images/sprites.svg#copy" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </form>
+
+          <form class="forms__form">
+            <div class="form__quest">
+              <label for="form4-input-1" class="form__quest-label">
+                <input
+                  type="text"
+                  id="form4-input-1"
+                  placeholder="a"
+                  class="form__input"
+                />
+                is&nbsp;
+              </label>
+              <label for="form4-2" class="form__quest-label">
+                <input
+                  type="text"
+                  id="form4-input-2"
+                  placeholder="n"
+                  class="form__input"
+                />
+                percent of what&nbsp;?
+              </label>
+            </div>
+            <div class="form__answer">
+              <button class="btn btn--primary">Calculate</button>
+              <input
+                type="text"
+                readonly
+                disabled
+                placeholder="Answer"
+                class="form__input form__input--answer"
+              />
+              <button class="form__copy" title="Copy">
+                <span class="form__copy-content" tabindex="-1">
+                  <svg
+                    class="form__copy-icon"
+                    width="20"
+                    height="20"
+                    viewbox="0 0 21 20"
+                  >
+                    <use xlink:href="images/sprites.svg#copy" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </form>
+
+          <form class="forms__form">
+            <div class="form__quest">
+              <label for="form5-input-1" class="form__quest-label">
+                Increase
+                <input
+                  type="text"
+                  id="form5-input-1"
+                  placeholder="a"
+                  class="form__input"
+                />
+              </label>
+              <label for="form5-input-2" class="form__quest-label">
+                by
+                <input
+                  type="text"
+                  id="form5-input-2"
+                  placeholder="n"
+                  class="form__input"
+                />
+                percent&nbsp;.
+              </label>
+            </div>
+            <div class="form__answer">
+              <button class="btn btn--primary">Calculate</button>
+              <input
+                type="text"
+                readonly
+                disabled
+                placeholder="Answer"
+                class="form__input form__input--answer"
+              />
+              <button class="form__copy" title="Copy">
+                <span class="form__copy-content" tabindex="-1">
+                  <svg
+                    class="form__copy-icon"
+                    width="20"
+                    height="20"
+                    viewbox="0 0 21 20"
+                  >
+                    <use xlink:href="images/sprites.svg#copy" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </form>
+
+          <form class="forms__form">
+            <div class="form__quest">
+              <label for="form6-input-1" class="form__quest-label">
+                Decrease
+                <input
+                  type="text"
+                  id="form6-input-1"
+                  placeholder="a"
+                  class="form__input"
+                />
+              </label>
+              <label for="form6-input-2" class="form__quest-label">
+                by
+                <input
+                  type="text"
+                  id="form6-input-2"
+                  placeholder="n"
+                  class="form__input"
+                />
+                percent&nbsp;.
+              </label>
+            </div>
+            <div class="form__answer">
+              <button class="btn btn--primary">Calculate</button>
+              <input
+                type="text"
+                readonly
+                disabled
+                placeholder="Answer"
+                class="form__input form__input--answer"
+              />
+              <button class="form__copy" title="Copy">
+                <span class="form__copy-content" tabindex="-1">
+                  <svg
+                    class="form__copy-icon"
+                    width="20"
+                    height="20"
+                    viewbox="0 0 21 20"
+                  >
+                    <use xlink:href="images/sprites.svg#copy" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </form>
         </section>
-        <section class="forms__form form">
-          <div class="form__quest">
-            <label for="form2-1" class="form__quest-label">
-              <input
-                type="text"
-                id="form2-1"
-                placeholder="a"
-                data-var="a"
-                class="form__input"
-              />
-              is&nbsp;
-            </label>
-            <label for="form2-2" class="form__quest-label">
-              what percent of
-              <input
-                type="text"
-                id="form2-2"
-                placeholder="b"
-                data-var="b"
-                data-non-zero
-                class="form__input"
-              />
-              ?
-            </label>
-          </div>
-          <div class="form__answer">
-            <button class="form__button">
-              <span class="form__button-content" tabindex="-1">Calculate</span>
-            </button>
-            <input
-              type="text"
-              readonly
-              disabled
-              placeholder="Answer"
-              class="form__input form__input--answer"
-            />
-            <button class="form__copy" title="Copy">
-              <span class="form__copy-content" tabindex="-1">
-                <svg
-                  class="form__copy-icon"
-                  width="20"
-                  height="20"
-                  viewbox="0 0 21 20"
-                >
-                  <use xlink:href="images/sprites.svg#copy" />
-                </svg>
-              </span>
-            </button>
-          </div>
-        </section>
-        <section class="forms__form form">
-          <div class="form__quest">
-            <label for="form3-1" class="form__quest-label">
-              <span class="form__quest-multiline"
-                >What is the percentage <br />increase/decrease from</span
-              >
-              <input
-                type="text"
-                id="form3-1"
-                placeholder="a"
-                data-var="a"
-                data-non-zero
-                class="form__input"
-              />
-            </label>
-            <label for="form3-2" class="form__quest-label">
-              to
-              <input
-                type="text"
-                id="form3-2"
-                placeholder="b"
-                data-var="b"
-                class="form__input"
-              />
-              ?
-            </label>
-          </div>
-          <div class="form__answer">
-            <button class="form__button">
-              <span class="form__button-content" tabindex="-1">Calculate</span>
-            </button>
-            <input
-              type="text"
-              readonly
-              disabled
-              placeholder="Answer"
-              class="form__input form__input--answer"
-            />
-            <button class="form__copy" title="Copy">
-              <span class="form__copy-content" tabindex="-1">
-                <svg
-                  class="form__copy-icon"
-                  width="20"
-                  height="20"
-                  viewbox="0 0 21 20"
-                >
-                  <use xlink:href="images/sprites.svg#copy" />
-                </svg>
-              </span>
-            </button>
-          </div>
-        </section>
-        <section class="forms__form form">
-          <div class="form__quest">
-            <label for="form4-1" class="form__quest-label">
-              <input
-                type="text"
-                id="form4-1"
-                placeholder="a"
-                data-var="a"
-                class="form__input"
-              />
-              is&nbsp;
-            </label>
-            <label for="form4-2" class="form__quest-label">
-              <input
-                type="text"
-                id="form4-2"
-                placeholder="n"
-                data-var="n"
-                data-non-zero
-                class="form__input"
-              />
-              percent of what&nbsp;?
-            </label>
-          </div>
-          <div class="form__answer">
-            <button class="form__button">
-              <span class="form__button-content" tabindex="-1">Calculate</span>
-            </button>
-            <input
-              type="text"
-              readonly
-              disabled
-              placeholder="Answer"
-              class="form__input form__input--answer"
-            />
-            <button class="form__copy" title="Copy">
-              <span class="form__copy-content" tabindex="-1">
-                <svg
-                  class="form__copy-icon"
-                  width="20"
-                  height="20"
-                  viewbox="0 0 21 20"
-                >
-                  <use xlink:href="images/sprites.svg#copy" />
-                </svg>
-              </span>
-            </button>
-          </div>
-        </section>
-        <section class="forms__form form">
-          <div class="form__quest">
-            <label for="form5-1" class="form__quest-label">
-              Increase
-              <input
-                type="text"
-                id="form5-1"
-                placeholder="a"
-                data-var="a"
-                class="form__input"
-              />
-            </label>
-            <label for="form5-2" class="form__quest-label">
-              by
-              <input
-                type="text"
-                id="form5-2"
-                placeholder="n"
-                data-var="n"
-                class="form__input"
-              />
-              percent&nbsp;.
-            </label>
-          </div>
-          <div class="form__answer">
-            <button class="form__button">
-              <span class="form__button-content" tabindex="-1">Calculate</span>
-            </button>
-            <input
-              type="text"
-              readonly
-              disabled
-              placeholder="Answer"
-              class="form__input form__input--answer"
-            />
-            <button class="form__copy" title="Copy">
-              <span class="form__copy-content" tabindex="-1">
-                <svg
-                  class="form__copy-icon"
-                  width="20"
-                  height="20"
-                  viewbox="0 0 21 20"
-                >
-                  <use xlink:href="images/sprites.svg#copy" />
-                </svg>
-              </span>
-            </button>
-          </div>
-        </section>
-        <section class="forms__form form">
-          <div class="form__quest">
-            <label for="form6-1" class="form__quest-label">
-              Decrease
-              <input
-                type="text"
-                id="form6-1"
-                placeholder="a"
-                data-var="a"
-                class="form__input"
-              />
-            </label>
-            <label for="form6-2" class="form__quest-label">
-              by
-              <input
-                type="text"
-                id="form6-2"
-                placeholder="n"
-                data-var="n"
-                class="form__input"
-              />
-              percent&nbsp;.
-            </label>
-          </div>
-          <div class="form__answer">
-            <button class="form__button">
-              <span class="form__button-content" tabindex="-1">Calculate</span>
-            </button>
-            <input
-              type="text"
-              readonly
-              disabled
-              placeholder="Answer"
-              class="form__input form__input--answer"
-            />
-            <button class="form__copy" title="Copy">
-              <span class="form__copy-content" tabindex="-1">
-                <svg
-                  class="form__copy-icon"
-                  width="20"
-                  height="20"
-                  viewbox="0 0 21 20"
-                >
-                  <use xlink:href="images/sprites.svg#copy" />
-                </svg>
-              </span>
-            </button>
-          </div>
-        </section>
-        <section class="forms__reset forms-reset">
-          <button class="forms-reset__button reset-button">
-            <span class="forms-reset__button-content" tabindex="-1"
-              >Reset all fields</span
-            >
-          </button>
-        </section>
-      </main>
-    </div>
-    <div class="center center--oyh">
-      <section class="how">
-        <div class="how__content">
+
+        <section class="section how">
           <h2 class="how__title">How it works</h2>
-          <p class="how__text">
+          <p class="paragraph">
             This percentage calculator tool is simple and quick to provide the
             correct answers. Please type any two values in the empty fields and
             click ‘Calculate’ to get the required value.
           </p>
-          <p class="how__text">
+          <p class="paragraph">
             For instance, if you want to increase 12 by 50%, you can enter ’12’
             by ‘50’ percent and click the calculate button to get the answer
             18%. You can also copy your results by selecting the option next to
             your answer tab.
           </p>
-          <p class="how__text">
+          <p class="paragraph">
             Learn more about the different types of percentages below. Click on
             the formula you are interested in.
           </p>
@@ -384,7 +336,7 @@
             <p class="how__formula">
               x = <span class="frac"><b>a</b><i>/</i><b>100</b></span> &times; n
             </p>
-            <p class="how__text">
+            <p class="paragraph">
               For instance,<br />
               80% of 5 oranges are ripe? How many oranges are ripe?
             </p>
@@ -404,7 +356,7 @@
                 So, the answer is 4 oranges, or you can say 80% of 5 is 4.
               </li>
             </ul>
-            <p class="how__text">
+            <p class="paragraph">
               You can find your answer this way or use our percentage calculator
               to get accurate results and save time
             </p>
@@ -427,7 +379,7 @@
             <p class="how__formula">
               x = <span class="frac"><b>a</b><i>/</i><b>b</b></span> &times; 100
             </p>
-            <p class="how__text">
+            <p class="paragraph">
               For instance,<br />A runner is doing a workout, his goal is to run
               10 km. He has completed 6 km. Write in percentage how many km he
               has completed.
@@ -445,7 +397,7 @@
               </li>
               <li>So, the runner has completed 60% of his workout.</li>
             </ul>
-            <p class="how__text">
+            <p class="paragraph">
               This formula can help calculate the percentage value of two
               different values. You can easily find out the answer via our
               percentage calculator.
@@ -472,7 +424,7 @@
               <span class="frac"><i>(</i><b>b - a</b><i>)/</i><b>a</b></span>
               &times; 100
             </p>
-            <p class="how__text">
+            <p class="paragraph">
               For instance,<br />In 2018, the gas price changed from $3.24 to
               $3.50. Calculate the % of change in the price of gas in 2018.
             </p>
@@ -499,7 +451,7 @@
                 overall increase in gas price in 2018.
               </li>
             </ul>
-            <p class="how__text">
+            <p class="paragraph">
               A percentage increase or decrease compares the relationship
               between two values, i.e., from a to b, and reveals their
               differences. Hence, the positive sign shows an increase, while the
@@ -528,7 +480,7 @@
                 ><i>(</i><b>a &times; 100</b><i>)/</i><b>n</b></span
               >
             </p>
-            <p class="how__text">
+            <p class="paragraph">
               For instance,<br />There are 8 drum players in a high school band.
               60% of the band play the drum, find out the total number of band
               members in the band?
@@ -550,7 +502,7 @@
                 So, there are 13 band members, or you can say 8 is 60% of 13.
               </li>
             </ul>
-            <p class="how__text">
+            <p class="paragraph">
               Using this percentage formula, you can solve equations like these
               quickly or calculate for free using our percentage calculator.
             </p>
@@ -576,7 +528,7 @@
                 ><i>(</i><b>100 + n</b><i>)/</i><b>100</b></span
               >
             </p>
-            <p class="how__text">
+            <p class="paragraph">
               For instance,<br />Last week, the supply of 80kg of rice increased
               by 23%. So, what's the increased supply now?
             </p>
@@ -598,7 +550,7 @@
                 supply value.
               </li>
             </ul>
-            <p class="how__text">
+            <p class="paragraph">
               For percentage increase, you can also add the decimal to 1, for
               instance, 23%&nbsp;=&nbsp;0.23&nbsp;+&nbsp;1&nbsp;= &nbsp;1.23,
               and multiply it by 80 to get the same answer.
@@ -625,7 +577,7 @@
                 ><i>(</i><b>100 - n</b><i>)/</i><b>100</b></span
               >
             </p>
-            <p class="how__text">
+            <p class="paragraph">
               For instance,<br />The price of goods worth $80 suddenly fell by
               23%. So, what's the value after discount?
             </p>
@@ -647,20 +599,20 @@
                 a decrease in the value.
               </li>
             </ul>
-            <p class="how__text">
+            <p class="paragraph">
               For percentage decrease, you can also subtract the decimal from 1,
               for instance, 23%&nbsp;=
               &nbsp;1&nbsp;-&nbsp;0.23&nbsp;=&nbsp;0.77, and multiply it by 80
               to get the same answer.
             </p>
           </details>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="container">
-          <p class="font-medium text-base leading-6 text-slate-500 text-center">
-            © 2005 — 2022 Percentage®. All rights reserved.
-          </p>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <p>© 2005 — 2022 Percentage®. All rights reserved.</p>
 
           <nav class="footer__nav">
             <ul>
@@ -685,27 +637,7 @@
             </ul>
           </nav>
         </div>
-      </footer>
-    </div>
-    <script type="text/template" id="notice-template">
-      <li class="notice__item">
-        <div class="notice__content">
-          <span class="notice__type">
-            <svg class="notice__type-icon" data-theme="success" viewbox="0 0 10 10" width="8" height="8">
-              <use xlink:href="images/sprites.svg#ok"></use>
-            </svg>
-            <svg class="notice__type-icon" data-theme="error" viewbox="0 0 10 10" width="6" height="6">
-              <use xlink:href="images/sprites.svg#close"></use>
-            </svg>
-          </span>
-          <p class="notice__text" data-elem="text"></p>
-          <button class="notice__close">
-            <svg class="notice__close-icon" viewbox="0 0 10 10" width="10" height="10">
-              <use xlink:href="images/sprites.svg#close"></use>
-            </svg>
-          </button>
-        </div>
-      </li>
-    </script>
+      </div>
+    </footer>
   </body>
 </html>
